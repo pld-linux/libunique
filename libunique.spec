@@ -1,12 +1,12 @@
 Summary:	Library to make sure only one instance of a program is running
 Summary(pl.UTF-8):	Biblioteka zapewniająca uruchamianie tylko jednej instancji programu
 Name:		unique
-Version:	0.9.4
+Version:	1.0.2
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://www.gnome.org/~ebassi/source/%{name}-%{version}.tar.gz
-# Source0-md5:	c10d16db95275389d3361a8a023025d2
+# Source0-md5:	3064930a9dd5f382641bbb2072d13563
 URL:		http://live.gnome.org/LibUnique
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
