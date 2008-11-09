@@ -2,7 +2,7 @@ Summary:	Library to make sure only one instance of a program is running
 Summary(pl.UTF-8):	Biblioteka zapewniająca uruchamianie tylko jednej instancji programu
 Name:		unique
 Version:	1.0.2
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://www.gnome.org/~ebassi/source/%{name}-%{version}.tar.gz
@@ -16,6 +16,7 @@ BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	gtk-doc >= 1.6
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+Obsoletes:	gtkunique
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,6 +44,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-glib-devel >= 0.70
 Requires:	gtk+2-devel >= 2:2.12.0
+Obsoletes:	gtkunique-devel
 
 %description devel
 Header files for unique library.
@@ -55,6 +57,7 @@ Summary:	Static unique library
 Summary(pl.UTF-8):	Statyczna biblioteka unique
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
+Obsoletes:	gtkunique-static
 
 %description static
 Static unique library.
