@@ -1,12 +1,12 @@
 Summary:	Library to make sure only one instance of a program is running
 Summary(pl.UTF-8):	Biblioteka zapewniająca uruchamianie tylko jednej instancji programu
-Name:		unique
-Version:	1.0.6
+Name:		libunique
+Version:	1.0.8
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://www.gnome.org/~ebassi/source/%{name}-%{version}.tar.gz
-# Source0-md5:	90eccdb97722d53f872a8fbdc8255ebb
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libunique/1.0/%{name}-%{version}.tar.gz
+# Source0-md5:	8ea35a7d8da7ef2952cd79f9e1324053
 URL:		http://live.gnome.org/LibUnique
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
@@ -17,6 +17,7 @@ BuildRequires:	gtk-doc >= 1.6
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Obsoletes:	gtkunique
+Obsoletes:	unique
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,6 +46,7 @@ Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-glib-devel >= 0.70
 Requires:	gtk+2-devel >= 2:2.12.0
 Obsoletes:	gtkunique-devel
+Obsoletes:	unique-devel
 
 %description devel
 Header files for unique library.
@@ -58,6 +60,7 @@ Summary(pl.UTF-8):	Statyczna biblioteka unique
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	gtkunique-static
+Obsoletes:	unique-static
 
 %description static
 Static unique library.
@@ -70,6 +73,7 @@ Summary:	unique library API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki unique
 Group:		Documentation
 Requires:	gtk-doc-common
+Obsoletes:	unique-apidocs
 
 %description apidocs
 unique library API documentation.
