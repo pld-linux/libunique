@@ -1,17 +1,19 @@
 Summary:	Library to make sure only one instance of a program is running
 Summary(pl.UTF-8):	Biblioteka zapewniająca uruchamianie tylko jednej instancji programu
 Name:		libunique
-Version:	1.0.8
-Release:	2
+Version:	1.1.2
+Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libunique/1.0/%{name}-%{version}.tar.gz
-# Source0-md5:	8ea35a7d8da7ef2952cd79f9e1324053
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libunique/1.1/%{name}-%{version}.tar.gz
+# Source0-md5:	a99799e72779baa98352fbac7f91c910
 URL:		http://live.gnome.org/LibUnique
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.70
+BuildRequires:	gir-repository-devel >= 0.6.4
 BuildRequires:	glib2-devel >= 1:2.12.0
+BuildRequires:	gobject-introspection-devel >= 0.6.4
 BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	gtk-doc >= 1.6
 BuildRequires:	libtool
@@ -86,7 +88,7 @@ Dokumentacja API biblioteki unique.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I build/autotools
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -112,6 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README
 %attr(755,root,root) %{_libdir}/libunique-1.0.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libunique-1.0.so.0
+%{_libdir}/girepository-1.0/*.typelib
 
 %files devel
 %defattr(644,root,root,755)
@@ -119,6 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libunique-1.0.la
 %{_includedir}/unique-1.0
 %{_pkgconfigdir}/unique-1.0.pc
+%{_datadir}/gir-1.0/*.gir
 
 %files static
 %defattr(644,root,root,755)
