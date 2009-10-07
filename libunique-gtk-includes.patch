@@ -1,0 +1,47 @@
+From af0d50031feeb2a730615620d984b28ea7ab2114 Mon Sep 17 00:00:00 2001
+From: Emmanuele Bassi <ebassi@gnome.org>
+Date: Sun, 05 Apr 2009 08:49:20 +0000
+Subject: Do not include gtkwindow.h
+
+Single header file inclusion in GTK+ is deprecated.
+---
+diff --git a/unique/uniqueapp.h b/unique/uniqueapp.h
+index 76eae20..1476d99 100644
+--- a/unique/uniqueapp.h
++++ b/unique/uniqueapp.h
+@@ -24,7 +24,7 @@
+ 
+ #include <glib-object.h>
+ #include <unique/uniquemessage.h>
+-#include <gtk/gtkwindow.h>
++#include <gtk/gtk.h>
+ 
+ G_BEGIN_DECLS
+ 
+--
+cgit v0.8.2
+From f01929635748c7b9c83ef1e860be9fc5efba79b7 Mon Sep 17 00:00:00 2001
+From: Armin Burgmeier <armin@arbur.net>
+Date: Fri, 24 Apr 2009 17:55:28 +0000
+Subject: Fixed an include to match GTK+'s single include policy
+
+The uniquebackend.h header is still including gdk/gdkscreen.h when
+it should be including gdk/gdk.h instead.
+
+Signed-off-by: Emmanuele Bassi <ebassi@gnome.org>
+---
+diff --git a/unique/uniquebackend.h b/unique/uniquebackend.h
+index 6f738d4..a50ce4e 100644
+--- a/unique/uniquebackend.h
++++ b/unique/uniquebackend.h
+@@ -23,7 +23,7 @@
+ #define __UNIQUE_BACKEND_H__
+ 
+ #include <glib-object.h>
+-#include <gdk/gdkscreen.h>
++#include <gdk/gdk.h>
+ #include <unique/uniqueapp.h>
+ 
+ G_BEGIN_DECLS
+--
+cgit v0.8.2
