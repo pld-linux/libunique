@@ -12,6 +12,7 @@ URL:		http://live.gnome.org/LibUnique
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.70
+BuildRequires:	docbook-dtd412-xml
 BuildRequires:	glib2-devel >= 1:2.12.0
 BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	gtk-doc >= 1.6
