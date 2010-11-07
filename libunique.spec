@@ -1,22 +1,22 @@
 Summary:	Library to make sure only one instance of a program is running
 Summary(pl.UTF-8):	Biblioteka zapewniająca uruchamianie tylko jednej instancji programu
 Name:		libunique
-Version:	1.1.6
-Release:	2
+Version:	2.90.1
+Release:	0.1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libunique/1.1/%{name}-%{version}.tar.bz2
-# Source0-md5:	7955769ef31f1bc4f83446dbb3625e6d
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libunique/2.90/%{name}-%{version}.tar.bz2
+# Source0-md5:	7778865473d8c81084ad5959a0d9853c
 URL:		http://live.gnome.org/LibUnique
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	dbus-glib-devel >= 0.70
 BuildRequires:	docbook-dtd412-xml
-BuildRequires:	glib2-devel >= 1:2.12.0
-BuildRequires:	gobject-introspection-devel >= 0.6.4
-BuildRequires:	gtk+2-devel >= 2:2.12.0
-BuildRequires:	gtk-doc >= 1.11
-BuildRequires:	libtool
+BuildRequires:	glib2-devel >= 1:2.25.7
+BuildRequires:	gobject-introspection-devel >= 0.9.0
+BuildRequires:	gtk+3-devel >= 2.90.0
+BuildRequires:	gtk-doc >= 1.13
+BuildRequires:	libtool >= 2.2
 BuildRequires:	pkgconfig
 Obsoletes:	gtkunique
 Obsoletes:	unique
@@ -96,6 +96,7 @@ Dokumentacja API biblioteki unique.
 %configure \
 	--disable-silent-rules \
 	--enable-gtk-doc \
+	--enable-static \
 	--with-html-dir=%{_gtkdocdir}
 
 %{__make}
@@ -115,21 +116,21 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README
-%attr(755,root,root) %{_libdir}/libunique-1.0.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libunique-1.0.so.0
-%{_libdir}/girepository-1.0/Unique-1.0.typelib
+%attr(755,root,root) %{_libdir}/libunique-3.0.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libunique-3.0.so.0
+%{_libdir}/girepository-1.0/Unique-3.0.typelib
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libunique-1.0.so
-%{_libdir}/libunique-1.0.la
-%{_includedir}/unique-1.0
-%{_pkgconfigdir}/unique-1.0.pc
-%{_datadir}/gir-1.0/Unique-1.0.gir
+%attr(755,root,root) %{_libdir}/libunique-3.0.so
+%{_libdir}/libunique-3.0.la
+%{_includedir}/unique-3.0
+%{_pkgconfigdir}/unique-3.0.pc
+%{_datadir}/gir-1.0/Unique-3.0.gir
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libunique-1.0.a
+%{_libdir}/libunique-3.0.a
 
 %files apidocs
 %defattr(644,root,root,755)
