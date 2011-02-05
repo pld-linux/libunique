@@ -80,7 +80,7 @@ Obsoletes:	unique-apidocs
 %description apidocs
 unique library API documentation.
 
-%description apidocs
+%description apidocs -l pl.UTF-8
 Dokumentacja API biblioteki unique.
 
 %prep
