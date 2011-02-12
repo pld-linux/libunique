@@ -2,7 +2,7 @@ Summary:	Library to make sure only one instance of a program is running
 Summary(pl.UTF-8):	Biblioteka zapewniająca uruchamianie tylko jednej instancji programu
 Name:		libunique
 Version:	2.91.4
-Release:	0.3
+Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libunique/2.91/%{name}-%{version}.tar.bz2
@@ -107,6 +107,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libunique-3.0.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -123,7 +125,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libunique-3.0.so
-%{_libdir}/libunique-3.0.la
 %{_includedir}/unique-3.0
 %{_pkgconfigdir}/unique-3.0.pc
 %{_datadir}/gir-1.0/Unique-3.0.gir
