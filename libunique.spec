@@ -2,7 +2,7 @@ Summary:	Library to make sure only one instance of a program is running
 Summary(pl.UTF-8):	Biblioteka zapewniająca uruchamianie tylko jednej instancji programu
 Name:		libunique
 Version:	2.91.4
-Release:	0.1
+Release:	0.3
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libunique/2.91/%{name}-%{version}.tar.bz2
@@ -12,9 +12,9 @@ BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	dbus-glib-devel >= 0.70
 BuildRequires:	docbook-dtd412-xml
-BuildRequires:	glib2-devel >= 1:2.25.7
+BuildRequires:	glib2-devel >= 1:2.28.0
 BuildRequires:	gobject-introspection-devel >= 0.9.0
-BuildRequires:	gtk+3-devel >= 2.90.0
+BuildRequires:	gtk+3-devel >= 3.0.0
 BuildRequires:	gtk-doc >= 1.13
 BuildRequires:	libtool >= 2.2
 BuildRequires:	pkgconfig
