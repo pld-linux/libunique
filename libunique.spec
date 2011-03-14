@@ -36,9 +36,9 @@ Unique jest biblioteką do pisania aplikacji o jednej instancji. Jeśli
 taka aplikacja zostanie uruchomiona dwa razy, druga instancja po
 prostu się zamknie lub wyśle wiadomość do już uruchomionej.
 
-Unique ułatwia pisanie tego typu aplikacji, poprzez zapewnienie
-podstawowej klasy, biorąc przy tym pod uwagę wszystkie mechanizmy IPC
-potrzebne do wysyłania wiadomości do już uruchomionych instancji.
+Unique ułatwia pisanie tego typu aplikacji poprzez zapewnienie
+podstawowej klasy i dbanie o wszystkie mechanizmy IPC potrzebne do
+wysyłania wiadomości do już uruchomionej instancji.
 
 %package devel
 Summary:	Header files for unique library
