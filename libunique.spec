@@ -2,11 +2,15 @@ Summary:	Library to make sure only one instance of a program is running
 Summary(pl.UTF-8):	Biblioteka zapewniająca uruchamianie tylko jednej instancji programu
 Name:		libunique
 Version:	1.1.6
-Release:	4
+Release:	5
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libunique/1.1/%{name}-%{version}.tar.bz2
 # Source0-md5:	7955769ef31f1bc4f83446dbb3625e6d
+Patch0:		%{name}-gchar.patch
+Patch1:		%{name}-compiler-warnings.patch
+Patch2:		%{name}-fix-test.patch
+Patch3:		%{name}-include-terminator.patch
 URL:		http://live.gnome.org/LibUnique
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.10
@@ -85,6 +89,10 @@ Dokumentacja API biblioteki unique.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 %{__gtkdocize}
