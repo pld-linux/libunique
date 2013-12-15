@@ -1,3 +1,4 @@
+# NOTE: for libunique 3.x (for GTK+ 3.x) see libunique3.spec
 Summary:	Library to make sure only one instance of a program is running
 Summary(pl.UTF-8):	Biblioteka zapewniająca uruchamianie tylko jednej instancji programu
 Name:		libunique
